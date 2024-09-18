@@ -31,7 +31,13 @@ public class CourseService
     }
     
     public void totalEnrolledCourses(String studentId) {
+    	System.out.println(students.get(studentId).getEnrolledCourses());
     	System.out.println(students.get(studentId).totalEnrolledCourses());
+    }
+    
+    public void totalCredits(String studentId) {
+    	int total= students.get(studentId).totalEnrolledCourses()*8;
+    	System.out.println("creditos "+total);
     }
 
     public void displayCourseInformation(String courseId){
